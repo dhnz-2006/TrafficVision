@@ -1,0 +1,5 @@
+__background__
+car
+motorcycle
+bus
+truck

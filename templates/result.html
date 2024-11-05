@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Detection Results</title>
+</head>
+<body>
+    <h1>Vehicle Detection Results</h1>
+    
+    <h2>Detected Vehicles</h2>
+    <ul>
+        <li>Cars: {{ vehicle_count['car'] }}</li>
+        <li>Trucks: {{ vehicle_count['truck'] }}</li>
+        <li>Bikes: {{ vehicle_count['bike'] }}</li>
+        <li>Ambulances: {{ vehicle_count['ambulance'] }}</li>
+        <li>Other Vehicles: {{ vehicle_count['other_vehicles'] }}</li>
+    </ul>
+
+    <h2>Predicted Time to Pass: {{ predicted_time }} seconds</h2>
+
+    <h2>Annotated Image</h2>
+    <img src="data:image/png;base64,{{ img_data }}" alt="Annotated Image" style="max-width: 100%; height: auto;">
+    
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
